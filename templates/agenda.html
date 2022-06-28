@@ -3,9 +3,17 @@
 {% block content %}
     <h2>Agendamentos</h2>
 
+    <h3>Meus eventos</h3>
     <ul style='font-size: 18px'>
-    {% for evento in eventos %}
+    {% for evento in my_events %}
         <li> {{ evento.titulo }} - {{ evento.get_data_evento }}</li>
     {% endfor%}
+    </ul>
+
+    <h3>Todos eventos</h3>
+    <ul style="font-size: 18px">
+        {% for evento in all_events %}
+            <li>{{ evento.titulo }} - {{ evento.get_data_evento }}</li>
+        {% endfor%}
     </ul>
 {% endblock %}
