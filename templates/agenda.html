@@ -2,7 +2,9 @@
 
 {% block content %}
     <h2>Agendamentos</h2>
-
+    <a href="agenda/evento/">
+        <button type="button">Novo Evento</button>
+    </a>
     <h3>Meus eventos</h3>
     <ul style='font-size: 18px'>
     {% for evento in my_events %}
