@@ -8,7 +8,11 @@
     <h3>Meus eventos</h3>
     <ul style='font-size: 18px'>
     {% for evento in my_events %}
-        <li> {{ evento.titulo }} - {{ evento.get_data_evento }}</li>
+        <li>
+            {{ evento.titulo }} - {{ evento.get_data_evento }}
+            ( <a href="agenda/evento/?id={{ evento.id }}">Editar</a> -
+            <a href="agenda/evento/delete/{{ evento.id }}/">Excluir</a> )
+        </li>
     {% endfor%}
     </ul>
 
